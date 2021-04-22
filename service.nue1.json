@@ -1,7 +1,8 @@
 {
     "cluster": {
+        "peername": "nue1.zehy",
+        "leave_on_shutdown": false,
         "secret": "b23a4ca47a973d12c527171d19b70f28242511dd9af9aed4eaa9688734501831",
-        "leave_on_shutdown": true,
         "listen_multiaddress": ["/ip4/0.0.0.0/tcp/19096", "/ip4/0.0.0.0/udp/19096/quic"],
         "enable_relay_hop": true,
         "connection_manager": {
@@ -18,26 +19,30 @@
         "peer_watch_interval": "5s",
         "mdns_interval": "10s",
         "disable_repinning": false,
-        "follower_mode": true,
+        "follower_mode": false,
         "peer_addresses": [
-            "/dns4/nue1.zehy.cloud/tcp/19096/p2p/12D3KooWJAKJGnPuKyXV91EJuZ2hhyRfV64XkMYxCgoVnrfWR12c",
-            "/dns4/nue1.zehy.cloud/udp/19096/quic/p2p/12D3KooWJAKJGnPuKyXV91EJuZ2hhyRfV64XkMYxCgoVnrfWR12c",
             "/dns4/stl1.zehy.cloud/tcp/19096/p2p/12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR",
-            "/dns4/stl1.zehy.cloud/udp/19096/quic/p2p/12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR"
+            "/dns4/stl1.zehy.cloud/udp/19096/quic/p2p/12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR",
+            "/dns4/sin1.zehy.cloud/tcp/19096/p2p/12D3KooWHiZ8BgYzB7nBtRgoQEMtryLCHUbo3CUzYbcHp4HbaXNj",
+            "/dns4/sin1.zehy.cloud/udp/19096/quic/p2p/12D3KooWHiZ8BgYzB7nBtRgoQEMtryLCHUbo3CUzYbcHp4HbaXNj"
         ]
     },
     "consensus": {
         "crdt": {
             "cluster_name": "collab_cluster_zehy_default",
-            "trusted_peers": ["12D3KooWJAKJGnPuKyXV91EJuZ2hhyRfV64XkMYxCgoVnrfWR12c", "12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR"]
+            "trusted_peers": [
+                "12D3KooWJAKJGnPuKyXV91EJuZ2hhyRfV64XkMYxCgoVnrfWR12c",
+                "12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR",
+                "12D3KooWHiZ8BgYzB7nBtRgoQEMtryLCHUbo3CUzYbcHp4HbaXNj"
+            ]
         },
         "rebroadcast_interval": "10s",
         "peerset_metric": "ping"
     },
     "api": {
         "ipfsproxy": {
-            "listen_multiaddress": "/ip4/127.0.0.1/tcp/9095",
-            "node_multiaddress": "/ip4/127.0.0.1/tcp/5001",
+            "listen_multiaddress": "/ip4/0.0.0.0/tcp/9095",
+            "node_multiaddress": "/ip4/10.7.1.1/tcp/5001",
             "log_file": "",
             "read_timeout": "0s",
             "read_header_timeout": "5s",
@@ -46,7 +51,7 @@
             "max_header_bytes": 4096
         },
         "restapi": {
-            "http_listen_multiaddress": "/ip4/127.0.0.1/tcp/9094",
+            "http_listen_multiaddress": "/ip4/0.0.0.0/tcp/9094",
             "read_timeout": "0s",
             "read_header_timeout": "5s",
             "write_timeout": "0s",
@@ -65,7 +70,7 @@
     },
     "ipfs_connector": {
         "ipfshttp": {
-            "node_multiaddress": "/ip4/127.0.0.1/tcp/5001",
+            "node_multiaddress": "/ip4/10.7.1.1/tcp/5001",
             "connect_swarms_delay": "30s",
             "ipfs_request_timeout": "5m0s",
             "pin_timeout": "10m",
