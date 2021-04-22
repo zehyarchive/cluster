@@ -23,13 +23,19 @@
             "/dns4/nue1.zehy.cloud/tcp/19096/p2p/12D3KooWJAKJGnPuKyXV91EJuZ2hhyRfV64XkMYxCgoVnrfWR12c",
             "/dns4/nue1.zehy.cloud/udp/19096/quic/p2p/12D3KooWJAKJGnPuKyXV91EJuZ2hhyRfV64XkMYxCgoVnrfWR12c",
             "/dns4/stl1.zehy.cloud/tcp/19096/p2p/12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR",
-            "/dns4/stl1.zehy.cloud/udp/19096/quic/p2p/12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR"
+            "/dns4/stl1.zehy.cloud/udp/19096/quic/p2p/12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR",
+            "/dns4/sin1.zehy.cloud/tcp/19096/p2p/12D3KooWHiZ8BgYzB7nBtRgoQEMtryLCHUbo3CUzYbcHp4HbaXNj",
+            "/dns4/sin1.zehy.cloud/udp/19096/quic/p2p/12D3KooWHiZ8BgYzB7nBtRgoQEMtryLCHUbo3CUzYbcHp4HbaXNj"
         ]
     },
     "consensus": {
         "crdt": {
             "cluster_name": "collab_cluster_zehy_default",
-            "trusted_peers": ["12D3KooWJAKJGnPuKyXV91EJuZ2hhyRfV64XkMYxCgoVnrfWR12c", "12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR"]
+            "trusted_peers": [
+                "12D3KooWJAKJGnPuKyXV91EJuZ2hhyRfV64XkMYxCgoVnrfWR12c",
+                "12D3KooWGgtULdpqERBQprMUWnaGvhcD2Dur7CDc5hbJcC9x4PyR",
+                "12D3KooWHiZ8BgYzB7nBtRgoQEMtryLCHUbo3CUzYbcHp4HbaXNj"
+            ]
         },
         "rebroadcast_interval": "10s",
         "peerset_metric": "ping"
